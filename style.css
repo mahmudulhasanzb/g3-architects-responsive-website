@@ -1,50 +1,69 @@
-/* Work sans font */
+/* Work Sans font import from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+/* Apply Work Sans as the default font for the entire document */
 .work-sans-font {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-/* --------------------------------------- */
 
-/* Shared style */
+/* ============================================
+   SHARED/GLOBAL STYLES
+   ============================================ */
 
+/* Reset default browser margins and padding to create consistent spacing across all elements */
 *{
   margin: 0;
   padding: 0;
+}
+
+/* Remove Extra Scroll, overflow etc */
+body {
+  overflow-x: hidden;
 }
 
 .display-flex{
   display: flex;
 }
 
+/* Primary brand color*/
 .text-primary{
- color: #FF900E;
+  color: #FF900E;
 }
 
+/* Consistent section title styling - used for all major section headings */
 .section-title{
   font-size: 2.8rem;
   font-weight: 700;
 }
 
-/* ---color--- */
+/* ============================================
+   COLOR & TEXT UTILITY CLASSES
+   ============================================ */
+
 .text-gray{
   color: #424242;
 }
 
+/* Light gray text with margin spacing - commonly used for descriptions and secondary text */
 .text-light-gray, .banner-description{
   color: #727272;
   margin-top: 24px;
   margin-bottom: 32px;
 }
 
+
 .bg-light{
   background-color: rgba(255, 144, 14, 0.1);
 }
 
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+/* Primary action button styling */
 .btn-primary{
   color: white;
   background-color: #FF900E;
@@ -60,31 +79,42 @@
 .btn-primary:hover{
   opacity: 80%;
   transition: .5s;
-  box-shadow: 1px 1px 2rcap rgba(0, 0, 0, 0.281);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.281);
 }
+
+/* ============================================
+   LAYOUT & CONTAINER STYLES
+   ============================================ */
+
 
 main{
   max-width: 1440px;
   margin: 0 auto;
 }
 
+
 main > section{
   margin-top: 130px;
 }
-/* ------------------- */
 
-/* header styles */
 
-/* ------------------ */
+header{
+  max-width: 1920px;
+}
 
-/* navbar releted styles */
+/* ============================================
+   HEADER & NAVIGATION STYLES
+   ============================================ */
+
+
 .navbar{
   justify-content: space-between;
   align-items: center;
 }
 
+/* Navigation links list - inherits flex properties from parent */
 .nav-links{
-
+  /* Note: Empty rule but included for semantic clarity - could be expanded with media queries */
 }
 
 .nav-item{
@@ -107,8 +137,15 @@ main > section{
   font-size: 2rem;
 }
 
+/* ============================================
+   BANNER SECTION STYLES
+   ============================================ */
 
-/* banner releted styles */
+header{
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .banner-content{
   max-width: 850px;
   margin: 0 auto;
@@ -129,11 +166,17 @@ main > section{
   line-height: 24px;
 }
 
-.banner-image{
+.banner-image {
   width: 100%;
+  margin-top: 50px;
+  margin-bottom: 45px;
 }
 
-/* team and feature releted style */
+/* ============================================
+   TEAMS SECTION STYLES
+   ============================================ */
+
+
 .teams{
   align-items: center;
 }
@@ -144,8 +187,9 @@ main > section{
   gap: 24px;
 }
 
+
 .our-features{
-  margin-left: 130px;;
+  margin-left: 30px;
   max-width: 530px;
 }
 
@@ -154,16 +198,23 @@ main > section{
   font-weight: 500;
 }
 
-/* features section releted styles */
+/* ============================================
+   FEATURES SECTION STYLES
+   ============================================ */
+
 .features{
-  gap: 140px;
+  max-width: 1440px;
+  gap: 54px;
+  align-items: center;
 }
+
 
 #feature-section-title{
   border-left: 5px solid #FF900E;
   padding-left: 20px;
 }
 
+/* Individual feature card styling */
 .feature-card{
   padding: 30px;
   border-radius: 8px;
@@ -171,6 +222,7 @@ main > section{
   margin: 20px;
 }
 
+/* Feature card heading styling */
 .feature-card .feature-title{
   font-size: 1.25rem;
   font-weight: 600;
@@ -178,7 +230,29 @@ main > section{
   margin-bottom: 0px;
 }
 
-/* some fact releted styles */
+#experience-badge{
+  padding: 45px 42px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: -100px;
+  margin-bottom: -100px;
+}
+
+/* Large year display in experience badge */
+#experience-year{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Featured architect image sizing */
+.featured-architect img{
+  max-width: 700px;
+}
+
+/* ============================================
+   FACTS SECTION STYLES
+   ============================================ */
+
 .facts-container{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -196,6 +270,7 @@ main > section{
   text-align: center;
 }
 
+/* Large fact numbers */
 .fact-number{
   font-size: 2.8rem;
   font-weight: 600;
@@ -203,18 +278,23 @@ main > section{
   margin-bottom: 10px;
 }
 
+/* Fact category names */
 .fact-name{
   font-size: 1.25rem;
   font-weight: 600;
   margin-top: 10px;
 }
 
+/* Fact section description text */
 .fact-description{
   max-width: 540px;
   margin-bottom: 100px;
 }
 
-/* sponsor releted styles */
+/* ============================================
+   SPONSORS SECTION STYLES
+   ============================================ */
+
 .sponsor-info{
   max-width: 542px;
   margin: 50px auto;
@@ -222,25 +302,49 @@ main > section{
 }
 
 .sponsor-companies{
+  max-width: 1440px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   place-items: center;
-  gap: 155px;
+  gap: 50px;
 }
 
+/* Sponsor logo styling - grayscale for neutral appearance */
 .sponsor-companies img{
   filter: grayscale(100%);
 }
 
 
-/*  responsive media query */
+/* ============================================
+   FOOTER STYLES
+   ============================================ */
+footer{
+  max-width: 1440px;
+  margin: 130px auto;
+  background-color: rgba(255, 244, 231, 1);
+  border-radius: 8px;
+}
+
+.footer{
+  padding: 5px;
+  text-align: center;
+}
+
+
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE (≤576px)
+   ============================================ */
+
 @media screen and (max-width: 576px) {
   .navbar,
   .nav-links,
-  .teams{
+  .teams,
+  .features{
     flex-direction: column;
   }
 
+  /* Change grids to single column on mobile */
   .team-img-container,
   .facts-container,
   .sponsor-companies
@@ -264,16 +368,28 @@ main > section{
 
   .our-features{
     margin-left: 20px;
+
+  }
+
+
+  #experience-badge{
+    margin-top: 20px;
+    margin-left: 20px;
   }
 }
 
-/* medium */
+/* ============================================
+   RESPONSIVE DESIGN - TABLET (576px - 992px)
+   ============================================ */
+
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .teams{
+  .teams, .features{
     flex-direction: column;
   }
+
   .our-features{
-    margin: 20 auto;
+    margin: 20px auto;
+    margin-top: 20px;
   }
 
   .sponsor-companies, .fact-description{
@@ -282,5 +398,12 @@ main > section{
     justify-items: center;
   }
 
-
+  /* Maintain experience badge styling on tablets */
+  #experience-badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: -100px;
+    margin-bottom: -100px;
+  }
 }
