@@ -357,6 +357,10 @@ footer{
     gap: 24px;
   }
 
+  .featured-architect img{
+    max-width: 90%;
+  }
+
   .sponsor-companies{
     justify-content: center;
     gap: 50px;
@@ -368,9 +372,7 @@ footer{
 
   .our-features{
     margin-left: 20px;
-
   }
-
 
   #experience-badge{
     margin-top: 20px;
